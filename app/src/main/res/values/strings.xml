@@ -1,3 +1,93 @@
 <resources>
     <string name="app_name">Thirty Days in Melbourne</string>
+
+    <string name="flinders_street_station_title">Flinders Street Station</string>
+    <string name="flinders_street_station_desc">The most iconic railway station in Melbourne.</string>
+
+    <string name="federation_square_title">Federation Square</string>
+    <string name="federation_square_desc">A vibrant cultural precinct with museums and restaurants.</string>
+
+    <string name="royal_botanic_gardens_title">Royal Botanic Gardens</string>
+    <string name="royal_botanic_gardens_desc">Expansive gardens with beautiful walking trails.</string>
+
+    <string name="queen_victoria_market_title">Queen Victoria Market</string>
+    <string name="queen_victoria_market_desc">A bustling historic marketplace in the city.</string>
+
+    <string name="melbourne_cricket_ground_title">Melbourne Cricket Ground</string>
+    <string name="melbourne_cricket_ground_desc">One of the world’s greatest sports stadiums.</string>
+
+    <string name="hosier_lane_title">Hosier Lane</string>
+    <string name="hosier_lane_desc">Famous laneway known for its vibrant street art.</string>
+
+    <string name="shrine_of_remembrance_title">Shrine of Remembrance</string>
+    <string name="shrine_of_remembrance_desc">A war memorial and museum with city views.</string>
+
+    <string name="st_kilda_beach_title">St Kilda Beach</string>
+    <string name="st_kilda_beach_desc">Popular beach with a pier and stunning sunsets.</string>
+
+    <string name="luna_park_title">Luna Park</string>
+    <string name="luna_park_desc">Historic amusement park with a giant smiling face entrance.</string>
+
+    <string name="eureka_skydeck_title">Eureka Skydeck</string>
+    <string name="eureka_skydeck_desc">Observation deck with panoramic views of Melbourne.</string>
+
+    <string name="royal_exhibition_building_title">Royal Exhibition Building</string>
+    <string name="royal_exhibition_building_desc">A World Heritage-listed exhibition pavilion.</string>
+
+    <string name="carlton_gardens_title">Carlton Gardens</string>
+    <string name="carlton_gardens_desc">UNESCO-listed gardens with fountains and tall trees.</string>
+
+    <string name="melbourne_zoo_title">Melbourne Zoo</string>
+    <string name="melbourne_zoo_desc">Home to over 300 animal species in natural habitats.</string>
+
+    <string name="national_gallery_of_victoria_title">National Gallery of Victoria</string>
+    <string name="national_gallery_of_victoria_desc">Australia\'s oldest, most visited art museum.</string>
+
+    <string name="state_library_of_victoria_title">State Library of Victoria</string>
+    <string name="state_library_of_victoria_desc">Historic library with beautiful reading rooms.</string>
+
+    <string name="brighton_beach_boxes_title">Brighton Beach Boxes</string>
+    <string name="brighton_beach_boxes_desc">Colorful beach huts along the sandy shoreline.</string>
+
+    <string name="melbourne_museum_title">Melbourne Museum</string>
+    <string name="melbourne_museum_desc">Modern museum showcasing culture, nature and science.</string>
+
+    <string name="scienceworks_title">Scienceworks</string>
+    <string name="scienceworks_desc">Interactive science and technology museum for all ages.</string>
+
+    <string name="yarra_river_title">Yarra River</string>
+    <string name="yarra_river_desc">Scenic river with trails, cruises and cafés.</string>
+
+    <string name="docklands_title">Docklands</string>
+    <string name="docklands_desc">Modern waterfront precinct with restaurants and art.</string>
+
+    <string name="old_melbourne_gaol_title">Old Melbourne Gaol</string>
+    <string name="old_melbourne_gaol_desc">Historic jail that once housed infamous criminals.</string>
+
+    <string name="the_block_arcade_title">The Block Arcade</string>
+    <string name="the_block_arcade_desc">Elegant 19th-century shopping arcade.</string>
+
+    <string name="collins_street_title">Collins Street</string>
+    <string name="collins_street_desc">Known for upscale shopping and historic buildings.</string>
+
+    <string name="melbourne_star_observation_wheel_title">Melbourne Star Observation Wheel</string>
+    <string name="melbourne_star_observation_wheel_desc">Giant Ferris wheel with scenic city views.</string>
+
+    <string name="healesville_sanctuary_title">Healesville Sanctuary</string>
+    <string name="healesville_sanctuary_desc">Wildlife park specializing in native Australian animals.</string>
+
+    <string name="dandenong_ranges_title">Dandenong Ranges</string>
+    <string name="dandenong_ranges_desc">Beautiful forested area with gardens and trails.</string>
+
+    <string name="great_ocean_road_title">Great Ocean Road</string>
+    <string name="great_ocean_road_desc">Famous coastal drive with stunning rock formations.</string>
+
+    <string name="philip_island_title">Philip Island</string>
+    <string name="philip_island_desc">Known for its penguin parade and surf beaches.</string>
+
+    <string name="grampians_national_park_title">Grampians National Park</string>
+    <string name="grampians_national_park_desc">Mountain range known for hiking, waterfalls and views.</string>
+
+    <string name="puffing_billy_railway_title">Puffing Billy Railway</string>
+    <string name="puffing_billy_railway_desc">Historic steam train through the Dandenong Ranges.</string>
 </resources>
