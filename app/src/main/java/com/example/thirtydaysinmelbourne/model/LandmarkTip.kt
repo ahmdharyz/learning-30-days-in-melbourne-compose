@@ -1,8 +1,11 @@
 package com.example.thirtydaysinmelbourne.model
 
+import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
+
 data class LandmarkTip(
     val day: Int,
-    val title: String,
-    val description: String,
-    val imageResourceId: Int,
+    @StringRes val title: Int,
+    @StringRes val description: Int,
+    @DrawableRes val imageResourceId: Int,
 )
