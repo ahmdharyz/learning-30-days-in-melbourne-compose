@@ -5,12 +5,15 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Card
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -24,6 +27,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.compose.ThirtyDaysInMelbourneTheme
+import com.example.thirtydaysinmelbourne.model.LandmarkTip
+import com.example.thirtydaysinmelbourne.model.landmarkTips
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,19 +47,28 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun ThirtyDaysInMelbourne(modifier: Modifier = Modifier) {
+fun ThirtyDaysInMelbourne(landmarks: List<LandmarkTip> = landmarkTips, modifier: Modifier = Modifier) {
+    LazyColumn(
+        contentPadding = PaddingValues(8.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp),
+        modifier = modifier
+    ) {
+        items(landmarks) { landmark ->
+                ThirdyDaysInMelbourneCard(landmark)
+        }
+    }
 }
 
 @Composable
-fun ThirdyDaysInMelbourneCard(modifier: Modifier = Modifier) {
+fun ThirdyDaysInMelbourneCard(landmark: LandmarkTip, modifier: Modifier = Modifier) {
     ElevatedCard(
         modifier = modifier
             .height(300.dp)
     ) {
         Column (modifier = Modifier.padding(8.dp)) {
             Image(
-                painter = painterResource(R.drawable.flinders_street_station),
-                contentDescription = stringResource(R.string.flinders_street_station_title),
+                painter = painterResource(landmark.imageResourceId),
+                contentDescription = stringResource(landmark.title),
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
                     .fillMaxWidth()
@@ -78,6 +92,6 @@ fun ThirdyDaysInMelbourneCard(modifier: Modifier = Modifier) {
 @Composable
 fun ThirtyDaysInMelbournePreview() {
     ThirtyDaysInMelbourneTheme {
-        ThirdyDaysInMelbourneCard()
+        ThirtyDaysInMelbourne(landmarks = landmarkTips)
     }
 }
