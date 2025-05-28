@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Thirty Days in Melbourne</string>
+    <string name="app_name">30 Days in Melbourne</string>
 
     <string name="flinders_street_station_title">Flinders Street Station</string>
     <string name="flinders_street_station_desc">The most iconic railway station in Melbourne.</string>
