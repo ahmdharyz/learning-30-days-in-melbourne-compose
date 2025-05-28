@@ -26,6 +26,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
@@ -56,8 +57,9 @@ fun ThirtyDaysInMelbourne(landmarks: List<LandmarkTip> = landmarkTips, modifier:
     ) {
         LazyColumn(
             contentPadding = it,
-            verticalArrangement = Arrangement.spacedBy(8.dp),
+            verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_medium)),
             modifier = modifier
+                .padding(dimensionResource(R.dimen.padding_small))
         ) {
             items(landmarks) { landmark ->
                 ThirdyDaysInMelbourneCard(landmark)
@@ -85,7 +87,7 @@ fun ThirdyDaysInMelbourneCard(landmark: LandmarkTip, modifier: Modifier = Modifi
         modifier = modifier
             .height(300.dp)
     ) {
-        Column (modifier = Modifier.padding(8.dp)) {
+        Column (modifier = Modifier.padding(dimensionResource(R.dimen.padding_small))) {
             Image(
                 painter = painterResource(landmark.imageResourceId),
                 contentDescription = stringResource(landmark.title),
@@ -93,7 +95,7 @@ fun ThirdyDaysInMelbourneCard(landmark: LandmarkTip, modifier: Modifier = Modifi
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(200.dp)
-                    .padding(bottom = 8.dp)
+                    .padding(bottom = dimensionResource(R.dimen.padding_small))
                     .clip(shape = MaterialTheme.shapes.medium)
             )
             Text(
