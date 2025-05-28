@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
@@ -50,13 +51,17 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun ThirtyDaysInMelbourne(landmarks: List<LandmarkTip> = landmarkTips, modifier: Modifier = Modifier) {
-    LazyColumn(
-        contentPadding = PaddingValues(8.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
-        modifier = modifier
-    ) {
-        items(landmarks) { landmark ->
+    Scaffold(
+        topBar = { ThirtyDaysInMelbourneTopAppBar() }
+    ) { it ->
+        LazyColumn(
+            contentPadding = it,
+            verticalArrangement = Arrangement.spacedBy(8.dp),
+            modifier = modifier
+        ) {
+            items(landmarks) { landmark ->
                 ThirdyDaysInMelbourneCard(landmark)
+            }
         }
     }
 }
