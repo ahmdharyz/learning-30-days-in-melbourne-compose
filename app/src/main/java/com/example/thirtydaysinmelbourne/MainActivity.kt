@@ -19,6 +19,7 @@ import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -39,10 +40,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ThirtyDaysInMelbourneTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    ThirtyDaysInMelbourne(
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                Surface {
+                    ThirtyDaysInMelbourne(modifier = Modifier)
                 }
             }
         }
