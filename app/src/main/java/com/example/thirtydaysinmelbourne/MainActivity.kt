@@ -24,6 +24,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.compose.ThirtyDaysInMelbourneTheme
@@ -77,11 +78,13 @@ fun ThirdyDaysInMelbourneCard(landmark: LandmarkTip, modifier: Modifier = Modifi
                     .clip(shape = MaterialTheme.shapes.medium)
             )
             Text(
-                text = stringResource(R.string.flinders_street_station_title),
-                style = MaterialTheme.typography.titleLarge
+                text = stringResource(landmark.title),
+                style = MaterialTheme.typography.titleLarge,
+                overflow = TextOverflow.Clip,
+                maxLines = 1,
             )
             Text(
-                text = stringResource(R.string.flinders_street_station_desc),
+                text = stringResource(landmark.description),
                 style = MaterialTheme.typography.bodyMedium
             )
         }
