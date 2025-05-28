@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -25,6 +26,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
@@ -42,7 +44,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ThirtyDaysInMelbourneTheme {
-                Surface {
+                Surface(color = MaterialTheme.colorScheme.background) { // Why isn't there a SurfaceDefault object to get the default color?
                     ThirtyDaysInMelbourne(modifier = Modifier)
                 }
             }
@@ -85,6 +87,7 @@ fun ThirtyDaysInMelbourneTopAppBar(modifier: Modifier = Modifier) {
 @Composable
 fun ThirdyDaysInMelbourneCard(landmark: LandmarkTip, modifier: Modifier = Modifier) {
     ElevatedCard(
+        colors = CardDefaults.cardColors(), // Is this the correct way to get the default color?
         modifier = modifier
             .height(300.dp)
     ) {
