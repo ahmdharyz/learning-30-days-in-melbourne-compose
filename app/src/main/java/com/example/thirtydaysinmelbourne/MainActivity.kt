@@ -72,6 +72,7 @@ fun ThirtyDaysInMelbourne(landmarks: List<LandmarkTip> = landmarkTips, modifier:
 @Composable
 fun ThirtyDaysInMelbourneTopAppBar(modifier: Modifier = Modifier) {
     CenterAlignedTopAppBar(
+        modifier = modifier,
         title = {
             Text(
                 text = stringResource(R.string.app_name),
