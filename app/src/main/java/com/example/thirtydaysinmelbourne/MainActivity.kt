@@ -53,7 +53,7 @@ class MainActivity : ComponentActivity() {
 fun ThirtyDaysInMelbourne(landmarks: List<LandmarkTip> = landmarkTips, modifier: Modifier = Modifier) {
     Scaffold(
         topBar = { ThirtyDaysInMelbourneTopAppBar() }
-    ) { it ->
+    ) {
         LazyColumn(
             contentPadding = it,
             verticalArrangement = Arrangement.spacedBy(8.dp),
