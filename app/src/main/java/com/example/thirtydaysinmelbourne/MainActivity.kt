@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -89,16 +90,22 @@ fun ThirdyDaysInMelbourneCard(landmark: LandmarkTip, modifier: Modifier = Modifi
             .height(300.dp)
     ) {
         Column (modifier = Modifier.padding(dimensionResource(R.dimen.padding_small))) {
-            Image(
-                painter = painterResource(landmark.imageResourceId),
-                contentDescription = stringResource(landmark.title),
-                contentScale = ContentScale.Crop,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(200.dp)
-                    .padding(bottom = dimensionResource(R.dimen.padding_small))
-                    .clip(shape = MaterialTheme.shapes.medium)
-            )
+            Box {
+                Image(
+                    painter = painterResource(landmark.imageResourceId),
+                    contentDescription = stringResource(landmark.title),
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(200.dp)
+                        .padding(bottom = dimensionResource(R.dimen.padding_small))
+                        .clip(shape = MaterialTheme.shapes.medium)
+                )
+                Text(
+                    text = "Day ${landmark.day}",
+                    style = MaterialTheme.typography.labelMedium
+                )
+            }
             Text(
                 text = stringResource(landmark.title),
                 style = MaterialTheme.typography.titleLarge,
