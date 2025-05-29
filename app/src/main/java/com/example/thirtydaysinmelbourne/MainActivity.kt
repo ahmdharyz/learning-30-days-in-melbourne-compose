@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -104,6 +105,7 @@ fun ThirdyDaysInMelbourneCard(landmark: LandmarkTip, modifier: Modifier = Modifi
                 overflow = TextOverflow.Clip,
                 maxLines = 1,
             )
+            Spacer(Modifier.height(dimensionResource(R.dimen.padding_small)))
             Text(
                 text = stringResource(landmark.description),
                 style = MaterialTheme.typography.bodyMedium
