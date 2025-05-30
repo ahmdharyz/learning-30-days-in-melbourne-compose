@@ -6,7 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -62,7 +61,7 @@ fun ThirtyDaysInMelbourne(landmarks: List<LandmarkTip> = landmarkTips, modifier:
                 .padding(dimensionResource(R.dimen.padding_small))
         ) {
             items(landmarks) { landmark ->
-                ThirdyDaysInMelbourneCard(landmark)
+                ThirtyDaysInMelbourneCard(landmark)
             }
         }
     }
@@ -83,7 +82,7 @@ fun ThirtyDaysInMelbourneTopAppBar(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun ThirdyDaysInMelbourneCard(landmark: LandmarkTip, modifier: Modifier = Modifier) {
+fun ThirtyDaysInMelbourneCard(landmark: LandmarkTip, modifier: Modifier = Modifier) {
     Text(
         text = stringResource(R.string.landmark_day_label, landmark.day),
         style = MaterialTheme.typography.labelLarge,
