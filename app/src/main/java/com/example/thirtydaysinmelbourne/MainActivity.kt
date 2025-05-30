@@ -90,8 +90,6 @@ fun ThirtyDaysInMelbourneCard(landmark: LandmarkTip, modifier: Modifier = Modifi
     )
     ElevatedCard(
         colors = CardDefaults.cardColors(), // Is this the correct way to get the default color?
-        modifier = modifier
-            .height(300.dp)
     ) {
         Column (modifier = Modifier.padding(dimensionResource(R.dimen.padding_small))) {
 
@@ -117,6 +115,7 @@ fun ThirtyDaysInMelbourneCard(landmark: LandmarkTip, modifier: Modifier = Modifi
                 text = stringResource(landmark.description),
                 style = MaterialTheme.typography.bodyMedium
             )
+            Spacer(Modifier.height(dimensionResource(R.dimen.padding_small)))
         }
     }
 }
