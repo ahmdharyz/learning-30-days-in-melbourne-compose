@@ -41,7 +41,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ThirtyDaysInMelbourneTheme {
-                Surface(color = MaterialTheme.colorScheme.background) { // Why isn't there a SurfaceDefault object to get the default color?
+                Surface(color = MaterialTheme.colorScheme.background) {
                     ThirtyDaysInMelbourne(modifier = Modifier)
                 }
             }
@@ -89,7 +89,7 @@ fun ThirtyDaysInMelbourneCard(landmark: LandmarkTip, modifier: Modifier = Modifi
         modifier = Modifier.padding(bottom = dimensionResource(R.dimen.padding_small))
     )
     ElevatedCard(
-        colors = CardDefaults.cardColors(), // Is this the correct way to get the default color?
+        colors = CardDefaults.cardColors()
     ) {
         Column (modifier = Modifier.padding(dimensionResource(R.dimen.padding_small))) {
 
