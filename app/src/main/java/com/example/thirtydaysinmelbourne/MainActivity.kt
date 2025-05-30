@@ -60,7 +60,7 @@ fun ThirtyDaysInMelbourne(landmarks: List<LandmarkTip> = landmarkTips, modifier:
             modifier = modifier
                 .padding(dimensionResource(R.dimen.padding_small))
         ) {
-            items(landmarks) { landmark ->
+            items(landmarks, key = { landmark -> landmark.day }) { landmark ->
                 ThirtyDaysInMelbourneCard(landmark)
             }
         }
