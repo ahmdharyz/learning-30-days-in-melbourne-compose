@@ -107,8 +107,8 @@ fun ThirtyDaysInMelbourneCard(landmark: LandmarkTip, modifier: Modifier = Modifi
             Text(
                 text = stringResource(landmark.title),
                 style = MaterialTheme.typography.titleLarge,
-                overflow = TextOverflow.Clip,
-                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                maxLines = 2,
             )
             Spacer(Modifier.height(dimensionResource(R.dimen.padding_small)))
             Text(
