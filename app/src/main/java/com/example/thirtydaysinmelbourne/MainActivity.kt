@@ -84,28 +84,29 @@ fun ThirtyDaysInMelbourneTopAppBar(modifier: Modifier = Modifier) {
 
 @Composable
 fun ThirdyDaysInMelbourneCard(landmark: LandmarkTip, modifier: Modifier = Modifier) {
+    Text(
+        text = stringResource(R.string.landmark_day_label, landmark.day),
+        style = MaterialTheme.typography.labelLarge,
+        modifier = Modifier.padding(bottom = dimensionResource(R.dimen.padding_small))
+    )
     ElevatedCard(
         colors = CardDefaults.cardColors(), // Is this the correct way to get the default color?
         modifier = modifier
             .height(300.dp)
     ) {
         Column (modifier = Modifier.padding(dimensionResource(R.dimen.padding_small))) {
-            Box {
-                Image(
-                    painter = painterResource(landmark.imageResourceId),
-                    contentDescription = stringResource(landmark.title),
-                    contentScale = ContentScale.Crop,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(200.dp)
-                        .padding(bottom = dimensionResource(R.dimen.padding_small))
-                        .clip(shape = MaterialTheme.shapes.medium)
-                )
-                Text(
-                    text = "Day ${landmark.day}",
-                    style = MaterialTheme.typography.labelMedium
-                )
-            }
+
+            Image(
+                painter = painterResource(landmark.imageResourceId),
+                contentDescription = stringResource(landmark.title),
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(200.dp)
+                    .padding(bottom = dimensionResource(R.dimen.padding_small))
+                    .clip(shape = MaterialTheme.shapes.medium)
+            )
+
             Text(
                 text = stringResource(landmark.title),
                 style = MaterialTheme.typography.titleLarge,
